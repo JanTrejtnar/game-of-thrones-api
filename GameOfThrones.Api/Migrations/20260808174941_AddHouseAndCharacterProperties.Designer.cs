@@ -4,6 +4,7 @@ using GameOfThrones.Api.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GameOfThrones.Api.Migrations
 {
     [DbContext(typeof(GameOfThronesDbContext))]
-    partial class GameOfThronesDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260808174941_AddHouseAndCharacterProperties")]
+    partial class AddHouseAndCharacterProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

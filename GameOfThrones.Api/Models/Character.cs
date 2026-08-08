@@ -5,48 +5,50 @@ using System.Threading.Tasks;
 
 namespace GameOfThrones.Api.Models
 {
-    public class Character
-{
-    public int Id { get; set; }
+        public class Character
+    {
+        public int Id { get; set; }
 
-    public string FirstName { get; set; } = String.Empty;
-    public string LastName { get; set; } = String.Empty;
-    public string? Nickname { get; set; }
+        public string FirstName { get; set; } = String.Empty;
+        public string LastName { get; set; } = String.Empty;
+        public string? Nickname { get; set; }
 
-    public DateOnly? BirthDate { get; set; }
-    public DateOnly? DeathDate { get; set; }
-    public string? DeathCause { get; set; }
+        public DateOnly? BirthDate { get; set; }
+        public DateOnly? DeathDate { get; set; }
+        public string? DeathCause { get; set; }
 
-    public string CurrentAllegiance { get; set; } = String.Empty;
+        public string CurrentAllegiance { get; set; } = String.Empty;
 
-    public string ActorName { get; set; } = String.Empty;
-    public string FirstEpisodeAppearance { get; set; } = String.Empty;
-    public string LastEpisodeAppearance { get; set; } = String.Empty;
+        public string ActorName { get; set; } = String.Empty;
+        public string FirstEpisodeAppearance { get; set; } = String.Empty;
+        public string LastEpisodeAppearance { get; set; } = String.Empty;
 
-    // DB References
+        public string? ImagePath { get; set; }
 
-    public int? HouseId { get; set; }
-    public House? House { get; set; }
+        // DB References
 
-    public int? FatherId { get; set; }
-    public Character? Father { get; set; }
+        public int? HouseId { get; set; }
+        public House? House { get; set; }
 
-    public int? MotherId { get; set; }
-    public Character? Mother { get; set; }
+        public int? FatherId { get; set; }
+        public Character? Father { get; set; }
 
-    // Self-references
+        public int? MotherId { get; set; }
+        public Character? Mother { get; set; }
 
-    public int? KilledById { get; set; }
-    public Character? KilledBy { get; set; }
+        // Self-references
 
-    public int? SpouseId { get; set; }
-    public Character? Spouse { get; set; }
+        public int? KilledById { get; set; }
+        public Character? KilledBy { get; set; }
 
-    //public List<Character> Children { get; set; } = new();
+        public int? SpouseId { get; set; }
+        public Character? Spouse { get; set; }
 
-    // Enums
+        //public List<Character> Children { get; set; } = new();
 
-    public Gender Gender { get; set; }
-    public CharacterStatus Status { get; set; }
-}
+        // Enums
+
+        public Gender Gender { get; set; }
+        public CharacterStatus Status { get; set; }
+    }
 }
